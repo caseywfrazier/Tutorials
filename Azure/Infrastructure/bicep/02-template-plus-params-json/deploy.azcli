@@ -1,8 +1,5 @@
 # change dir
-cd Azure/Infrastructure/bicep/02-template-plus-params-json
-
-# initial deploy
-az deployment group create --template-file main.bicep
+cd /workspaces/Tutorials/Azure/Infrastructure/bicep/02-template-plus-params-json
 
 # deploy with json parameters file
 az deployment group create --template-file main.bicep --parameters parameters/main.parameters.dev.json
