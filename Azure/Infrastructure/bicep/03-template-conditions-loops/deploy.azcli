@@ -1,0 +1,11 @@
+# change dir
+cd /workspaces/Tutorials/Azure/Infrastructure/bicep/03-template-conditions-loops
+
+# deploy with bicep with inline parameters
+az deployment group create --template-file main.bicep --parameters location=westus3
+
+# deploy to prod env
+az deployment group create --template-file main.bicep --parameters environmentName=Production location=westus3
+
+# deploy bicep after moving database resources into a separate module
+az deployment group create --template-file main.bicep

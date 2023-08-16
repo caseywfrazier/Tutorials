@@ -1,6 +1,6 @@
 # create a KV without storing secrets in a script or config file
 
-keyVaultName='dev-6fu7jm7wiutxu-kv' # globally unique name
+keyVaultName='dev-6fu7jm7wiutxu2-kv' # globally unique name
 read -s -p "Enter the login name: " login # type value in terminal
 read -s -p "Enter the password: " password # type value in terminal
 
