@@ -1,13 +1,15 @@
 # install az cli on ubuntu (gh codespace)
+# cntrl+' to run line in terminal for .azcli files
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-# change dir
-cd Azure/Infrastructure/bicep/first-bicep-template
-
 # setup az cli
-az bicep install && az bicep upgrade
+# az bicep install && az bicep upgrade
 az login --use-device-code --tenant 604c1504-c6a3-4080-81aa-b33091104187
 az account set --subscription "Concierge Subscription"
+
+# logout/clear account
+az logout
+az account clear
 
 # if you have multiple concierge subscriptions
 # az account list \
@@ -17,10 +19,4 @@ az account set --subscription "Concierge Subscription"
 # az account set --subscription {your subscription ID}
 
 # set default resource group
-az configure --defaults group="learn-c7431fc9-1185-432c-a929-29ba0a191e0b"
-
-# initial deploy
-# az deployment group create --template-file main.bicep
-
-# deploy with param
-az deployment group create --template-file main.bicep --parameters environmentType=nonprod
+az configure --defaults group="learn-71c3162b-2c2b-463f-a504-fa93fcf77a0c"
