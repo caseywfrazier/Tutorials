@@ -1,0 +1,8 @@
+# change dir
+cd Azure/Infrastructure/bicep/01-bicep-template
+
+# initial deploy
+# az deployment group create --template-file main.bicep
+
+# deploy with param
+az deployment group create --template-file main.bicep --parameters environmentType=nonprod

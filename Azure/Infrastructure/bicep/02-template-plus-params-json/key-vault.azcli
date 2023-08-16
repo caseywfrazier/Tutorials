@@ -1,0 +1,19 @@
+# create a KV without storing secrets in a script or config file
+
+keyVaultName='dev-6fu7jm7wiutxu-kv' # globally unique name
+read -s -p "Enter the login name: " login # type value in terminal
+read -s -p "Enter the password: " password # type value in terminal
+
+az keyvault create --name $keyVaultName --location westus3 --enabled-for-template-deployment true
+az keyvault secret set --vault-name $keyVaultName --name "sqlServerAdministratorLogin" --value $login --output none
+az keyvault secret set --vault-name $keyVaultName --name "sqlServerAdministratorPassword" --value $password --output none
+
+# verify secrets exist
+az keyvault secret list --vault-name $keyVaultName --query [].name --output tsv
+
+# clear values from terminal, so they can't be echo'ed (run command and don't enter a value to overwrite it)
+read -s -p "Enter the login name: " login
+read -s -p "Enter the password: " password
+
+# get KV resource ID
+az keyvault show --name $keyVaultName --query id --output tsv
