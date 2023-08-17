@@ -20,3 +20,7 @@ This repo will serve as a quick reference/template for completed tutorials.
 3. Bicep template + conditions & loops
 - [course link](https://learn.microsoft.com/en-us/training/modules/build-flexible-bicep-templates-conditions-loops/)
 - [my project](Azure/Infrastructure/bicep/03-template-conditions-loops/)
+
+4. Bicep composable modules
+- [course link](https://learn.microsoft.com/en-us/training/modules/create-composable-bicep-files-using-modules/)
+- [my project](Azure/Infrastructure/bicep/04-composable-modules/)
