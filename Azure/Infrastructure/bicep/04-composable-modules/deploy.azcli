@@ -1,0 +1,5 @@
+# change dir
+cd /workspaces/Tutorials/Azure/Infrastructure/bicep/04-composable-modules
+
+# deploy
+az deployment group create --template-file main.bicep

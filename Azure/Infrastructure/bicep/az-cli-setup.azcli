@@ -16,7 +16,7 @@ az account list \
    --refresh \
    --query "[?contains(name, 'Concierge Subscription')].id" \
    --output table
-az account set --subscription 2eb288f0-205d-43c5-9356-449b90daee2e
+az account set --subscription 02968119-355c-47c9-bb11-ab54f55ced94
 
 # set default resource group
-az configure --defaults group="learn-588a3fc5-cb7e-4c2e-8fc0-c6ecf3d73e6f"
+az configure --defaults group="learn-215d1967-af0e-453c-afa8-21ea971cbc87"
